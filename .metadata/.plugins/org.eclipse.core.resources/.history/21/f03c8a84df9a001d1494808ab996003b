@@ -1,0 +1,5 @@
+package com.primesoft.department.service.server;
+
+public class DepartmentService {
+
+}

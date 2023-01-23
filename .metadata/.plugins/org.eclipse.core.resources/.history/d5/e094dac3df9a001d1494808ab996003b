@@ -1,0 +1,13 @@
+package com.primesoft.department.service.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.primesoft.department.service.server.DepartmentService;
+
+@RestController
+public class DepartmentController {
+
+	@Autowired
+	private DepartmentService deptService;
+}

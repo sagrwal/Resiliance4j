@@ -1,0 +1,23 @@
+package com.primesoft.department.service.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.primesoft.department.service.entity.Department;
+import com.primesoft.department.service.server.DepartmentService;
+
+@RestController
+@RequestMapping("/departments")
+public class DepartmentController {
+
+	@Autowired
+	private DepartmentService deptService;
+	
+	
+	@PostMapping("/")
+	public Department saveDepatment(Department dept) {
+		 return deptService.saveDepartment(dept);
+	}
+}

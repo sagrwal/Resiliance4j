@@ -1,0 +1,13 @@
+
+|
+java:S1192!"FDefine a constant instead of duplicating this literal "black" 3 times.(ÙâÜğ8ˆôú¡Ü0HŒ
+RCRITICALZ
+CODE_SMELL
+Š
+java:S6204'"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ÌÀ×¸ÿÿÿÿÿ8ˆôú¡Ü0H
+RMAJORZ
+CODE_SMELL
+‚
+java:S1192 "LDefine a constant instead of duplicating this literal "electronics" 4 times.(˜şÚ·8ˆôú¡Ü0H‘
+RCRITICALZ
+CODE_SMELL

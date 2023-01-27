@@ -14,8 +14,8 @@ spring:
            filters:
             - name: CircuitBreaker
               args:
-                name: USER_SERVICE
-                fallbackuri: forward:/userServiceFallBack
+                name: USER-SERVICE
+                fallbackuri: forward:/userServiceFallBackMethod
          - id: DEPARTMENT-SERVICE
            uri: lb://DEPARTMENT-SERVICE
            predicates:
@@ -23,16 +23,34 @@ spring:
            filters:
             - name: CircuitBreaker
               args:
-                name: DEPARTMENT_SERVICE
-                fallbackuri: forward:/departmentServiceFallBack
+                name: DEPARTMENT-SERVICE
+                fallbackuri: forward:/departmentServiceFallBackMethod
                 
-hystrix:
-  command:
-    fallbackcmd:
-      execution:
-       isolation:
-         thread:
-           timeoutInMilliseconds: 4000
+management:
+   health:
+     circuitbreakers:
+        enabled: true
+   endpoints:
+      web:
+        exposure:
+          include: health
+   endpoint:
+      health:
+         show-details: always
+         
+resilience4j:
+  circuitbreaker:
+    instances:
+       USER-SERVICE:
+          register-health-indicator: true
+          failure-rate-threshold: 50
+          minimum-number-of-calls: 5
+          automatic-transition-from-open-to-half-open-enabled: true
+          wait-duration-in-open-state: 5s
+          permitted-number-of-calls-in-half-open-state: 3
+          sliding-window-size: 10
+          sliding-window-type: COUNT_BASED        
+         
        
 eureka:
   client:

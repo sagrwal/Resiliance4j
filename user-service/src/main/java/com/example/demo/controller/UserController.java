@@ -33,4 +33,6 @@ public class UserController {
 	  return userservice.getUserWithDepartment(userId);
 	
 }
+    
+ 
 }

@@ -33,6 +33,8 @@ public class DepartmentController {
 		log.info("Inside findDepartmentById method of departmentController");
 		return deptService.findDepartmentById(deptId);
 	}
+	
+
 		
 	}
 

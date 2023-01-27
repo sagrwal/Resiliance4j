@@ -8,6 +8,9 @@
     <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
     <fullyQualifiedTypeName name="jakarta.annotation.Generated"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
-    <fullyQualifiedTypeName name="com.example.demo.entity.User"/>
     <fullyQualifiedTypeName name="com.example.demo.valueobjects.Department"/>
+    <fullyQualifiedTypeName name="com.google.common.util.concurrent.Service"/>
+    <fullyQualifiedTypeName name="com.example.demo.entity.User"/>
+    <fullyQualifiedTypeName name="com.example.demo.server.UserService"/>
+    <fullyQualifiedTypeName name="com.primesoft.department.service.entity.Department"/>
 </qualifiedTypeNameHistroy>
